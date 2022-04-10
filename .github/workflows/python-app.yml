@@ -4,13 +4,8 @@
 name: Python application
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-permissions:
-  contents: read
+  schedule:
+    - cron: 0 11 * * 1,2,3,4,5
 
 jobs:
   build:
@@ -31,4 +26,4 @@ jobs:
     
     - name: run
       run: |
-        python test.py
+        python test2.py
