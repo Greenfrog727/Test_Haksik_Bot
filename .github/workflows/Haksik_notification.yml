@@ -26,4 +26,4 @@ jobs:
     
     - name: run
       run: |
-        python test2.py
+        python test2.py  ${{ secrets.TELEGRAM_TOKEN }}
